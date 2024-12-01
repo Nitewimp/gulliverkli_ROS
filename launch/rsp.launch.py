@@ -16,8 +16,8 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time')
 
     # Process the URDF file
-    pkg_path = os.path.join(get_package_share_directory('articubot_one'))
-    xacro_file = os.path.join(pkg_path,'description','robot.urdf.xacro')
+    pkg_path = os.path.join(get_package_share_directory('gulliverkli'))
+    xacro_file = os.path.join(pkg_path,'description','gulliverkli.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     
     # Create a robot_state_publisher node
