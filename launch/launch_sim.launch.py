@@ -54,18 +54,15 @@ def generate_launch_description():
                                     '-z', '0.1'],
                         output='screen')
     
-    # Node to bridge /cmd_vel and /odom
-    gz_bridge = Node(package="ros_gz_bridge", executable="parameter_bridge",
+
+    bridge_params = os.path.join(get_package_share_directory(package_name),'config','gz_bridge.yaml')
+    ros_gz_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
         arguments=[
-            "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
-            "/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist",
-            "/odom@nav_msgs/msg/Odometry@gz.msgs.Odometry",
-            "/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model",
-            "/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V"
-        ],
-        output='screen',
-        parameters=[
-            {'use_sim_time': True},
+            '--ros-args',
+            '-p',
+            f'config_file:={bridge_params}',
         ]
     )
 
@@ -75,5 +72,6 @@ def generate_launch_description():
         world_arg,
         gazebo,
         spawn_entity,
-        gz_bridge,
+        ros_gz_bridge,
+
     ])
