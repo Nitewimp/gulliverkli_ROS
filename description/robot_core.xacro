@@ -47,9 +47,10 @@
 
     <!-- Front Left Wheel -->
     <link name="front_left_wheel">
-        <visual>
+        <visual name='front_left_wheel_visual'>
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder radius="0.0485" length="0.045" />
+                <mesh filename="$(find gulliverkli)/meshes/mecanum_wheel_left.stl" scale="1 1 1" />
             </geometry>
             <material name="grey" />
         </visual>
@@ -75,9 +76,10 @@
 
     <!-- Front Right Wheel -->
     <link name="front_right_wheel">
-        <visual>
+        <visual name='front_right_wheel_visual'>
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder radius="0.0485" length="0.045" />
+                <mesh filename="$(find gulliverkli)/meshes/mecanum_wheel_right.stl" scale="1 1 1" />
             </geometry>
             <material name="grey" />
         </visual>
@@ -103,9 +105,10 @@
 
     <!-- rear Left Wheel -->
     <link name="rear_left_wheel">
-        <visual>
+        <visual name='rear_left_wheel_visual'>
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder radius="0.0485" length="0.045" />
+                <mesh filename="$(find gulliverkli)/meshes/mecanum_wheel_right.stl" scale="1 1 1" />
             </geometry>
             <material name="grey" />
         </visual>
@@ -131,9 +134,10 @@
 
     <!-- rear Right Wheel -->
     <link name="rear_right_wheel">
-        <visual>
+        <visual name='rear_right_wheel_visual'>
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder radius="0.0485" length="0.045" />
+                <mesh filename="$(find gulliverkli)/meshes/mecanum_wheel_left.stl" scale="1 1 1" />
             </geometry>
             <material name="grey" />
         </visual>
