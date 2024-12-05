@@ -66,6 +66,14 @@ def generate_launch_description():
         ]
     )
 
+    rviz2 = Node(
+        package="rviz2",
+        executable="rviz2",
+        arguments=[
+           #arguments here,
+        ]
+    )
+
     # Launch them all!
     return LaunchDescription([
         rsp,
@@ -73,5 +81,6 @@ def generate_launch_description():
         gazebo,
         spawn_entity,
         ros_gz_bridge,
+        rviz2,
 
     ])
