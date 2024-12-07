@@ -50,7 +50,7 @@
         <visual name='front_left_wheel_visual'>
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <mesh filename="$(find gulliverkli)/meshes/mecanum_wheel_left.stl" scale="1 1 1" />
+                <mesh filename="package://gulliverkli/meshes/mecanum_wheel_left.stl" scale="1 1 1" />
             </geometry>
             <material name="grey" />
         </visual>
@@ -79,7 +79,7 @@
         <visual name='front_right_wheel_visual'>
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <mesh filename="$(find gulliverkli)/meshes/mecanum_wheel_right.stl" scale="1 1 1" />
+                <mesh filename="package://gulliverkli/meshes/mecanum_wheel_right.stl" scale="1 1 1" />
             </geometry>
             <material name="grey" />
         </visual>
@@ -108,7 +108,7 @@
         <visual name='rear_left_wheel_visual'>
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <mesh filename="$(find gulliverkli)/meshes/mecanum_wheel_right.stl" scale="1 1 1" />
+                <mesh filename="package://gulliverkli/meshes/mecanum_wheel_right.stl" scale="1 1 1" />
             </geometry>
             <material name="grey" />
         </visual>
@@ -137,7 +137,7 @@
         <visual name='rear_right_wheel_visual'>
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <mesh filename="$(find gulliverkli)/meshes/mecanum_wheel_left.stl" scale="1 1 1" />
+                <mesh filename="package://gulliverkli/meshes/mecanum_wheel_left.stl" scale="1 1 1" />
             </geometry>
             <material name="grey" />
         </visual>
