@@ -66,5 +66,31 @@
                 </visual>
             </link>
         </model>
+
+        <model name="room_model">
+            <pose>-3 5 0 0 0 -1.5708</pose>
+            <static>true</static>
+            <link name="room_link">
+                <visual name="room_visual">
+                    <geometry>
+                        <mesh>
+                            <uri>file://home/balazs/ROS/src/gulliverkli/meshes/ROS_MAP.stl</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0.0 0.5 0.5 1.0</ambient> <!-- Teal color -->
+                        <diffuse>0.0 0.7 0.7 1.0</diffuse>
+                        <specular>0.3 0.3 0.3 1.0</specular>
+                    </material>
+                </visual>
+                <collision name="room_collision">
+                    <geometry>
+                        <mesh>
+                            <uri>file://home/balazs/ROS/src/gulliverkli/meshes/ROS_MAP.stl</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
     </world>
 </sdf>
