@@ -5,7 +5,8 @@
     <xacro:include filename="robot_core.xacro" />
     <xacro:include filename="gazebo_control.xacro" />
     <xacro:include filename="lidar.xacro" />
-    <!-- <xacro:include filename="camera_kinect.xacro" /> -->
-    <!-- <xacro:include filename="depth_kinect.xacro" /> -->
+    <xacro:include filename="kinectV2.xacro" />
+
+
     
 </robot>
