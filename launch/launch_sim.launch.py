@@ -69,22 +69,13 @@ def generate_launch_description():
         ]
     )
 
-    mecanum_drive_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["mecanum_cont"],
+    joystick = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','joystick.launch.py'
+                )]), launch_arguments={'use_sim_time': 'true'}.items()
     )
 
-    joint_broad_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["joint_broad"],
-    )
-
-    set_contoller_manager_use_sim_time = ExecuteProcess(
-        cmd=['ros2', 'param', 'set', '/controller_manager', 'use_sim_time', 'true'],
-        output='screen')
-
+   
     # Launch them all!
     return LaunchDescription([
 
@@ -96,8 +87,5 @@ def generate_launch_description():
         ros_gz_bridge,
         #ros_gz_image_bridge,
         rviz2,
-        mecanum_drive_spawner,
-        joint_broad_spawner,
-        set_contoller_manager_use_sim_time,
-
+        joystick,
     ])
