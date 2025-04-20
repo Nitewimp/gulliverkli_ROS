@@ -28,7 +28,7 @@ def generate_launch_description():
     micro_ros_agent = Node(
         package="micro_ros_agent",
         executable="micro_ros_agent",
-        arguments=["serial", "--dev", "/dev/ttyUSB0", "--baudrate", "921600"],
+        arguments=["serial", "--dev", "/dev/serial/by-path/pci-0000:00:14.0-usb-0:3:1.0-port0", "--baudrate", "921600"],
         output="screen"
     )
 
